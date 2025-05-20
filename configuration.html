@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-navigation-position="top-navbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configuration - Dependable Solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Header Section Start -->
+      <div class="header-wrapper">
+        <div class="logo-wrapper mobile">
+          <a href="welcome.html"
+            ><img src="./assets/images/logo.png" alt=""
+          /></a>
+          <button id="mobileMenuOpen"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <div class="navbar-wrapper">
+          <ul>
+            <li><a href="welcome.html">Welcome</a></li>
+            <li>
+              <a href="configuration.html" class="active">Configuration</a>
+            </li>
+            <li><a href="tabular-data.html">Tabular Data</a></li>
+          </ul>
+        </div>
+        
+        <div id="mobileMenu" class="mobile-navbar-wrapper">
+          <div class="mobile-navbar-inner">
+            <div class="mobile-navbar-content">
+              <div id="mobileMenuClose" class="mobile-navbar">
+                <i class="fa-solid fa-window-close"></i>
+              </div>
+              <div class="mobile-navbar-menu">
+                <ul>
+                  <li><a href="welcome.html">Welcome</a></li>
+                  <li><a href="configuration.html" class="active">Configuration</a></li>
+                  <li><a href="tabular-data.html">Tabular Data</a></li>
+                  <li><a href="login.html">Log Out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="user-profile-wrapper">
+          <div class="user-profile">
+            <img src="./assets/images/user.jpg" alt="User Profile" />
+            <div class="user-name">
+              <p>John Doe</p>
+              <p class="user-role">Admin</p>
+            </div>
+            <i class="fa-solid fa-chevron-down"></i>
+            <!-- Dropdown Sub Menu -->
+            <div class="user-menu">
+              <ul>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="login.html">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header Section End -->
+      <!-- Main Container Section Start -->
+      <div class="main-container-wrapper">
+        <div class="sidebar-wrapper">
+          <ul>
+            <li><a href="welcome.html">Welcome</a></li>
+            <li>
+              <a href="configuration.html" class="active">Configuration</a>
+            </li>
+            <li><a href="tabular-data.html">Tabular Data</a></li>
+          </ul>
+        </div>
+        <div class="configuration-wrapper container-section with-sidebar">
+          <div class="configuration-notes-wrapper">
+            <h1 class="title">Configuration Settings</h1>
+            <p class="sub-title">
+              Configure your settings to optimize your experience with our
+              services. Please fill out the form below to get started.
+            </p>
+          </div>
+          <div class="configuration-form-wrapper">
+            <form id="configuration-form">
+              <div class="form-items">
+                <div class="form-group">
+                  <p class="title">Theme Selector</p>
+                  <div class="theme-selector-wrapper">
+                    <div class="theme-selector">
+                      <label for="light">
+                        <input
+                          type="radio"
+                          class="light"
+                          id="light"
+                          name="theme"
+                          value="light"
+                          onclick="app.switchTheme('light')"
+                          checked
+                        />
+                        <img
+                          src="./assets/images/light-placeholder.png"
+                          alt=""
+                        />
+                        <p>Light</p>
+                      </label>
+                    </div>
+                    <div class="theme-selector">
+                      <label for="dark">
+                        <input
+                          type="radio"
+                          class="dark"
+                          id="dark"
+                          name="theme"
+                          value="dark"
+                          onclick="app.switchTheme('dark')"
+                        />
+                        <img
+                          src="./assets/images/dark-placeholder.png"
+                          alt=""
+                        />
+                        <p>Dark</p>
+                      </label>
+                    </div>
+                    <div class="theme-selector">
+                      <label for="colored">
+                        <input
+                          type="radio"
+                          class="colored"
+                          id="colored"
+                          name="theme"
+                          value="colored"
+                          onclick="app.switchTheme('colored')"
+                        />
+                        <img
+                          src="./assets/images/colored-placeholder.png"
+                          alt=""
+                        />
+                        <p>Colored</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mobNavigation">
+                  <p class="title">Navigation Style Selector</p>
+                  <div class="theme-selector-wrapper">
+                    <div class="theme-selector">
+                      <label for="top-navbar">
+                        <input
+                          type="radio"
+                          class="top-navbar"
+                          id="top-navbar"
+                          name="navbar"
+                          value="top-navbar"
+                          onclick="app.switchNavigationPosition('top-navbar')"
+                          checked
+                        />
+                        <img src="./assets/images/top-navbar.png" alt="" />
+                        <p>Top Navigation Bar</p>
+                      </label>
+                    </div>
+                    <div class="theme-selector">
+                      <label for="side-navbar">
+                        <input
+                          type="radio"
+                          class="side-navbar"
+                          id="side-navbar"
+                          name="navbar"
+                          value="side-navbar"
+                          onclick="app.switchNavigationPosition('side-navbar')"
+                        />
+                        <img src="./assets/images/side-navbar.png" alt="" />
+                        <p>Side Navigation Bar</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Main Container Section End -->
+      <!-- Footer Section -->
+      <div class="footer-wrapper">
+        <p>&copy; 2025 Dependable Solutions. All rights reserved.</p>
+      </div>
+      <!-- Footer Section End -->
+    </div>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

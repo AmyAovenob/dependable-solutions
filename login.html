@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-navigation-position="top-navbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Dependable Solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="login-wrapper">
+      <div class="login-form-wrapper">
+        <div class="logo-wrapper">
+          <a href="">
+            <img src="./assets/images/logo.png" alt="" />
+          </a>
+        </div>
+        <h1 class="title">Sign in with username</h1>
+        <p class="sub-title">
+          Make a new doc to bring your words, data and teams together. For free
+        </p>
+        <form id="login-form">
+          <div class="form-group">
+            <!-- <label for="username">Username</label> -->
+            <div class="form-item">
+              <i class="fa-solid fa-envelope left-icon"></i>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Username"
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <!-- <label for="password">Password</label> -->
+            <div class="form-item">
+              <i class="fa-solid fa-lock left-icon"></i>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+              />
+              <span class="right-icon">
+                <i class="fa-regular fa-eye-slash"></i>
+              </span>
+            </div>
+          </div>
+          <div>
+            <span id="validation-msg">All fields are required.</span>
+          </div>
+          <div class="form-group remember-me-wrapper">
+            <div class="form-item">
+              <input
+                type="checkbox"
+                class="remember-me"
+                id="remember-me"
+                name="remember-me"
+              />
+              <label for="remember-me">Remember me</label>
+            </div>
+            <div class="form-item" style="text-align: right">
+              <a href="" class="forgot-password">Forgot password?</a>
+            </div>
+          </div>
+          <button type="submit" class="login-btn">Get Started</button>
+        </form>
+      </div>
+
+      <!-- <div class="login-footer">
+      <p>&copy; 2023 Dependable Solutions. All rights reserved.</p>
+    </div>
+    <div class="login-footer">
+      <p>Need help? <a href="contact.html">Contact us</a></p>
+    </div> -->
+    </div>
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      // Show/hide password functionality
+      function togglePasswordVisibility() {
+        const passwordInput = document.getElementById("password");
+        const eyeIcon = document.querySelector(".right-icon i");
+        eyeIcon.addEventListener("click", function () {
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            eyeIcon.classList.remove("fa-eye-slash");
+            eyeIcon.classList.add("fa-eye");
+          } else {
+            passwordInput.type = "password";
+            eyeIcon.classList.remove("fa-eye");
+            eyeIcon.classList.add("fa-eye-slash");
+          }
+        });
+      }
+
+      function validatedForm() {
+        const loginForm = document.getElementById("login-form");
+        const validationMsgEl = document.getElementById("validation-msg");
+        loginForm.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          validationMsgEl.style.display = "none"; // Hide validation message
+
+          // Get the values from the form
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          if (username === "" || password === "") {
+            validationMsgEl.style.display = "block"; // Show validation message
+            return;
+          }
+
+          localStorage.setItem("username", username);
+
+          // Redirect to welcome page after successful login
+          window.location.href = "welcome.html";
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        validatedForm();
+        togglePasswordVisibility();
+      });
+    </script>
+  </body>
+</html>

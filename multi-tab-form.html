@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-navigation-position="top-navbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Tab Form - Dependable Solutions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Header Section Start -->
+      <div class="header-wrapper">
+        <div class="logo-wrapper mobile">
+          <a href="welcome.html"
+            ><img src="./assets/images/logo.png" alt=""
+          /></a>
+          <button id="mobileMenuOpen"><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <div class="navbar-wrapper">
+          <ul>
+            <li><a href="welcome.html">Welcome</a></li>
+            <li><a href="configuration.html">Configuration</a></li>
+            <li><a href="tabular-data.html" class="active">Tabular Data</a></li>
+          </ul>
+        </div>
+
+        <div id="mobileMenu" class="mobile-navbar-wrapper">
+          <div class="mobile-navbar-inner">
+            <div class="mobile-navbar-content">
+              <div id="mobileMenuClose" class="mobile-navbar">
+                <i class="fa-solid fa-window-close"></i>
+              </div>
+              <div class="mobile-navbar-menu">
+                <ul>
+                  <li><a href="welcome.html">Welcome</a></li>
+                  <li><a href="configuration.html">Configuration</a></li>
+                  <li><a href="tabular-data.html" class="active">Tabular Data</a></li>
+                  <li><a href="login.html">Log Out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="user-profile-wrapper">
+          <div class="user-profile">
+            <img src="./assets/images/user.jpg" alt="User Profile" />
+            <div class="user-name">
+              <p>John Doe</p>
+              <p class="user-role">Admin</p>
+            </div>
+            <i class="fa-solid fa-chevron-down"></i>
+            <!-- Dropdown Sub Menu -->
+            <div class="user-menu">
+              <ul>
+                <li><a href="">Profile</a></li>
+                <li><a href="">Settings</a></li>
+                <li><a href="login.html">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Header Section End -->
+      <!-- Main Container Section Start -->
+      <div class="main-container-wrapper">
+        <div class="sidebar-wrapper">
+          <ul>
+            <li><a href="welcome.html">Welcome</a></li>
+            <li><a href="configuration.html">Configuration</a></li>
+            <li><a href="tabular-data.html" class="active">Tabular Data</a></li>
+          </ul>
+        </div>
+        <div class="multi-tab-wrapper container-section with-sidebar">
+          <div class="configuration-notes-wrapper">
+            <div class="header-title">
+              <h1 class="title">Multi-Tab Form</h1>
+              <!-- <p class="sub-title">Configure your settings to optimize your experience with our services. Please fill out the form below to get started.</p> -->
+            </div>
+          </div>
+          <div class="tab-wrapper">
+            <div class="tab-header">
+              <ul>
+                <li data-tab-button="form" class="active">
+                  <button>
+                    <i class="fa-brands fa-wpforms"></i> Form Controls
+                  </button>
+                </li>
+                <li data-tab-button="table">
+                  <button>
+                    <i class="fa-solid fa-table-cells-large"></i> Nested Table
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content">
+              <div data-tab-content="form" class="tab-item active">
+                <h2 class="title">Fill out all fields in the form below</h2>
+                <div class="form-group-section">
+                  <div class="form-group">
+                    <div class="form-item">
+                      <label for="first-name">First Name</label>
+                      <input
+                        type="text"
+                        id="first-name"
+                        name="first-name"
+                        placeholder="Enter your first name"
+                      />
+                    </div>
+                    <div class="form-item">
+                      <label for="last-name">Last Name</label>
+                      <input
+                        type="text"
+                        id="last-name"
+                        name="last-name"
+                        placeholder="Enter your last name"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-item">
+                      <label for="gender">Gender</label>
+                      <select id="gender" name="gender">
+                        <option value="volvo">Male</option>
+                        <option value="saab">Female</option>
+                      </select>
+                    </div>
+                    <div class="form-item">
+                      <label for="birthday">Your Birthday</label>
+                      <input
+                        type="date"
+                        id="birthday"
+                        step="1"
+                        name="birthday"
+                      />
+                    </div>
+                    <div class="form-item">
+                      <label for="date-range-picker"
+                        >Date range picker (From - To)</label
+                      >
+                      <input
+                        type="text"
+                        id="date-range-picker"
+                        name="dates"
+                        value="01/01/2018 - 01/15/2018"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-item">
+                      <div style="margin-bottom: 20px">
+                        <p class="checkbox-label">Choose Multiple Option</p>
+                        <div class="checkbox-section">
+                          <div class="checkbox-wrapper">
+                            <input
+                              type="checkbox"
+                              id="vehicle1"
+                              name="vehicle1"
+                              value="Bike"
+                            />
+                            <label for="vehicle1"> I have a bike</label>
+                          </div>
+                          <div class="checkbox-wrapper">
+                            <input
+                              type="checkbox"
+                              id="vehicle2"
+                              name="vehicle2"
+                              value="Car"
+                            />
+                            <label for="vehicle2"> I have a car</label>
+                          </div>
+                          <div class="checkbox-wrapper">
+                            <input
+                              type="checkbox"
+                              id="vehicle3"
+                              name="vehicle3"
+                              value="Boat"
+                            />
+                            <label for="vehicle3"> I have a boat</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <p class="checkbox-label">Choose Any One Option</p>
+                        <div class="radiobtn-section">
+                          <div class="radiobtn-wrapper">
+                            <input
+                              type="radio"
+                              id="html"
+                              name="fav_language"
+                              value="HTML"
+                            />
+                            <label for="html">HTML</label>
+                          </div>
+                          <div class="radiobtn-wrapper">
+                            <input
+                              type="radio"
+                              id="css"
+                              name="fav_language"
+                              value="CSS"
+                            />
+                            <label for="css">CSS</label>
+                          </div>
+                          <div class="radiobtn-wrapper">
+                            <input
+                              type="radio"
+                              id="javascript"
+                              name="fav_language"
+                              value="JavaScript"
+                            />
+                            <label for="javascript">JavaScript</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <label for="interest">Your Interest</label>
+                      <select
+                        class="form-multi-select"
+                        id="interest"
+                        multiple
+                        data-coreui-search="true"
+                      >
+                        <option value="0" selected>Angular</option>
+                        <option value="1">Bootstrap</option>
+                        <option value="2">React.js</option>
+                        <option value="3">Vue.js</option>
+                        <optgroup label="backend">
+                          <option value="4">Django</option>
+                          <option value="5" selected>Laravel</option>
+                          <option value="6">Node.js</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-item">
+                      <label for="message">Message</label>
+                      <textarea
+                        id="message"
+                        placeholder="write something here..."
+                        autocomplete="on"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="btn-wrapper">
+                    <button
+                      type="submit"
+                      class="btn"
+                      formenctype="multipart/form-data"
+                      class="submit-btn"
+                    >
+                      Submit
+                      <i
+                        class="fa-solid fa-paper-plane"
+                        style="margin-left: 4px"
+                      ></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div data-tab-content="table" class="tab-item">
+                <div class="configuration-notes-wrapper">
+                  <div class="header-title">
+                    <h1 class="title">Tabular Data</h1>
+                    <p class="sub-title">
+                      Configure your settings to optimize your experience with
+                      our services. Please fill out the form below to get
+                      started.
+                    </p>
+                  </div>
+                  <div class="add-new-btn-wrapper">
+                    <a data-modal-open="multi-tab-form"
+                      ><i class="fa-solid fa-plus"></i> Add New</a
+                    >
+                  </div>
+                </div>
+                <div class="table-wrapper" style="margin-bottom: 0">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th style="width: 15%">First Name</th>
+                        <th style="width: 12%">Last Name</th>
+                        <th>Age</th>
+                        <th>Mobile Number</th>
+                        <th>Email Address</th>
+                        <th style="width: 12%">Blood Group</th>
+                        <th style="width: 15%">Address</th>
+                        <th>Points</th>
+                        <th style="width: 10%; text-align: center">Action</th>
+                      </tr>
+                      <tr>
+                        <td>Kashem</td>
+                        <td>Ali</td>
+                        <td>36</td>
+                        <td>+8801717249225</td>
+                        <td>kashem.ali@gmail.com</td>
+                        <td>A+</td>
+                        <td>29/11 Pallabi, Mirpur-12, Dhaka</td>
+                        <td>৳100</td>
+                        <td>
+                          <a href="" class="edit" title="Edit"
+                            ><i class="fa-solid fa-pencil"></i
+                          ></a>
+                          <a href="" class="delete" title="Delete"
+                            ><i class="fa-regular fa-trash-can"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Hashem</td>
+                        <td>Talukdar</td>
+                        <td>40</td>
+                        <td>+8801711569225</td>
+                        <td>hashem.tal@gmail.com</td>
+                        <td>AB+</td>
+                        <td>16/4 Pallabi, Mirpur-12, Dhaka</td>
+                        <td>৳150</td>
+                        <td>
+                          <a href="" class="edit" title="Edit"
+                            ><i class="fa-solid fa-pencil"></i
+                          ></a>
+                          <a href="" class="delete" title="Delete"
+                            ><i class="fa-regular fa-trash-can"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Ramiz</td>
+                        <td>Reja</td>
+                        <td>25</td>
+                        <td>+8801715212525</td>
+                        <td>ramiz50@gmail.com</td>
+                        <td>O+</td>
+                        <td>11/30 Purobi, Mirpur-11, Dhaka</td>
+                        <td>৳300</td>
+                        <td>
+                          <a href="" class="edit" title="Edit"
+                            ><i class="fa-solid fa-pencil"></i
+                          ></a>
+                          <a href="" class="delete" title="Delete"
+                            ><i class="fa-regular fa-trash-can"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tanvir</td>
+                        <td>Ahmed</td>
+                        <td>46</td>
+                        <td>+8801912254215</td>
+                        <td>tanvir10@gmail.com</td>
+                        <td>B+</td>
+                        <td>9/10 Pallabi, Mirpur-12, Dhaka</td>
+                        <td>৳250</td>
+                        <td>
+                          <a href="" class="edit" title="Edit"
+                            ><i class="fa-solid fa-pencil"></i
+                          ></a>
+                          <a href="" class="delete" title="Delete"
+                            ><i class="fa-regular fa-trash-can"></i
+                          ></a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Saiduzzaman</td>
+                        <td>Said</td>
+                        <td>36</td>
+                        <td>+8801717249225</td>
+                        <td>said123@gmail.com</td>
+                        <td>A+</td>
+                        <td>29/11 Pallabi, Mirpur-12, Dhaka</td>
+                        <td>৳100</td>
+                        <td>
+                          <a href="" class="edit" title="Edit"
+                            ><i class="fa-solid fa-pencil"></i
+                          ></a>
+                          <a href="" class="delete" title="Delete"
+                            ><i class="fa-regular fa-trash-can"></i
+                          ></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main Container Section End -->
+      <!-- Footer Section -->
+      <div class="footer-wrapper">
+        <p>&copy; 2025 Dependable Solutions. All rights reserved.</p>
+      </div>
+      <!-- Footer Section End -->
+    </div>
+
+    <!-- Modal Design Start -->
+    <div class="modal-container" data-modal="multi-tab-form">
+      <div class="modal-wrapper">
+        <div class="modal-header">
+          <h2 class="title">Person Add</h2>
+          <button class="close-btn" data-modal-close="multi-tab-form">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group-section">
+            <div class="form-group">
+              <div class="form-item">
+                <label for="first-name1">First Name</label>
+                <input
+                  type="text"
+                  id="first-name1"
+                  name="first-name1"
+                  placeholder="Enter your first name"
+                />
+              </div>
+              <div class="form-item">
+                <label for="last-name1">Last Name</label>
+                <input
+                  type="text"
+                  id="last-name1"
+                  name="last-name1"
+                  placeholder="Enter your last name"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-item">
+                <label for="mobile-number1">Mobile Number</label>
+                <input
+                  type="text"
+                  id="mobile-number1"
+                  name="mobile-number1"
+                  placeholder="Enter your mobile number"
+                />
+              </div>
+              <div class="form-item">
+                <label for="email1">Email Address</label>
+                <input
+                  type="text"
+                  id="email1"
+                  name="email1"
+                  placeholder="Enter your email address"
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-item">
+                <label for="gender1">Gender</label>
+                <select id="gender1" name="gender">
+                  <option value="volvo">Male</option>
+                  <option value="saab">Female</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="age1">Age</label>
+                <select id="age1" name="age">
+                  <option value="volvo">20</option>
+                  <option value="saab">30</option>
+                  <option value="saab">40</option>
+                  <option value="saab">50</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-item">
+                <p class="checkbox-label">Choose Multiple Option</p>
+                <div class="checkbox-section">
+                  <div class="checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      id="vehicle11"
+                      name="vehicle11"
+                      value="Bike"
+                    />
+                    <label for="vehicle11"> I have a bike</label>
+                  </div>
+                  <div class="checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      id="vehicle22"
+                      name="vehicle22"
+                      value="Car"
+                    />
+                    <label for="vehicle22"> I have a car</label>
+                  </div>
+                  <div class="checkbox-wrapper">
+                    <input
+                      type="checkbox"
+                      id="vehicle33"
+                      name="vehicle33"
+                      value="Boat"
+                    />
+                    <label for="vehicle33"> I have a boat</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-item">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  placeholder="write something here..."
+                  autocomplete="on"
+                ></textarea>
+              </div>
+            </div>
+            <!-- <div class="btn-wrapper">
+              <button
+                type="submit"
+                class="btn"
+                formenctype="multipart/form-data"
+                class="submit-btn"
+              >
+                Submit
+                <i class="fa-solid fa-paper-plane" style="margin-left: 4px"></i>
+              </button>
+            </div> -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-close" data-modal-close>
+              Close
+            </button>
+            <button type="button" class="btn-save">Submit
+              <i class="fa-solid fa-paper-plane" style="margin-left: 4px"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-backdrop"></div>
+    </div>
+    <!-- Modal Design End -->
+
+
+    <!-- Date range picker Start -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <!-- Date range picker End -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      // Date range picker
+      $('input[name="dates"]').daterangepicker();
+    </script>
+  </body>
+</html>
